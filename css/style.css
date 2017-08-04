@@ -49,7 +49,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 800;
+  font-weight: 600;
+  line-height: 1.6;
 }
 a {
   color: #404040;
@@ -221,13 +222,14 @@ hr.small {
   font-style: italic;
   font-weight: 300;
   font-size: 20px;
+  text-align: right;
 }
 .intro-header .post-heading .meta a {
   color: #fff;
 }
 @media only screen and (min-width: 768px) {
   .intro-header .post-heading h1 {
-    font-size: 55px;
+    font-size: 40px;
   }
   .intro-header .post-heading .subheading {
     font-size: 30px;
@@ -300,9 +302,13 @@ hr.small {
 }
 .post-tags a,
 .post-categories a {
-  border-bottom: 1px dotted #ababab;
   text-transform: uppercase;
   margin-right: 10px;
+  background: #0085a1;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 4px;
+  text-decoration: none;
 }
 .post-tags a:hover,
 .post-categories a:hover,
@@ -470,11 +476,14 @@ article .container .row .video-container embed {
   margin-top: 0;
 }
 article .container .row blockquote {
-  font-style: italic;
-  font-family: "Georgia", serif;
-  font-size: 1.2em;
-  padding: 0 30px 15px;
+  border-color: #ddd;
+  font-family: cursive;
+  font-size: 18px;
+  padding: 15px;
   text-align: center;
+}
+article .container .row blockquote ol li {
+  text-align: left;
 }
 article .container .row blockquote footer {
   border-top: none;
