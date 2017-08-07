@@ -1,3 +1,6 @@
+article .container .row p a {
+  color: #ffa500;
+}
 article .container .row img {
   max-width: 100% !important;
   height: auto;
@@ -55,12 +58,11 @@ article .container .row .pullquote.left {
   float: left;
 }
 figure.highlight {
-  background: #eee;
+  background: #fffae8;
   border: 1px solid color-border;
   margin-top: 15px;
-  padding: 7px 15px;
-  border-radius: 2px;
-  text-shadow: 0 0 1px #fff;
+  padding: 7px 0;
+  border-radius: 4px;
   line-height: 1.6;
   overflow: auto;
   position: relative;
@@ -88,12 +90,12 @@ figure.highlight table {
 }
 figure.highlight table .gutter {
   color: color-meta;
-  padding-right: 15px;
+  padding: 0 15px;
   border-right: 1px solid color-border;
   text-align: right;
 }
 figure.highlight table .code {
-  padding-left: 15px;
+  padding: 0 15px;
   border-left: 1px solid #fff;
   color: #666;
 }
@@ -102,6 +104,24 @@ figure.highlight table .line {
 }
 figure.highlight table .line.marked {
   background: #d6d6d6;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: font-mono;
+}
+pre .function .keyword {
+  color: color-blue;
+}
+pre .function .title {
+  color: color-orange;
+}
+pre .function .params {
+  color: color-brown;
+}
+pre {
+  font-size: 14px;
 }
 pre .comment,
 pre .template_comment,
@@ -114,6 +134,9 @@ pre .javadoc {
   font-style: italic;
 }
 pre .keyword,
+pre .built_in {
+  color: color-sea;
+}
 pre .winutils,
 pre .method,
 pre .addition,
@@ -123,9 +146,7 @@ pre .status,
 pre .nginx .title {
   color: #859900;
 }
-pre .number,
 pre .command,
-pre .string,
 pre .tag .value,
 pre .phpdoc,
 pre .tex .formula,
@@ -133,18 +154,37 @@ pre .regexp,
 pre .hexcolor {
   color: #2aa198;
 }
+pre .name {
+  color: color-blue;
+}
+pre .attr {
+  color: color-darkorange;
+}
+pre .string {
+  color: color-sea;
+}
 pre .title,
 pre .localvars,
 pre .chunk,
 pre .decorator,
-pre .built_in,
 pre .identifier,
 pre .vhdl,
 pre .literal,
 pre .id {
   color: #268bd2;
 }
-pre .attribute,
+pre .selector-tag {
+  color: color-blue;
+}
+pre .selector-class {
+  color: color-orange;
+}
+pre .attribute {
+  color: color-armygreen;
+}
+pre .number {
+  color: color-purple;
+}
 pre .variable,
 pre .lisp .body,
 pre .smalltalk .number,

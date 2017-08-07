@@ -453,3 +453,11 @@ img::-moz-selection {
 body {
   webkit-tap-highlight-color: #0085a1;
 }
+@media (min-width: 1200px) {
+  .col-lg-offset-2 {
+    margin: 50px;
+  }
+  .col-lg-8 {
+    width: 90%;
+  }
+}

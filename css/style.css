@@ -453,6 +453,17 @@ img::-moz-selection {
 body {
   webkit-tap-highlight-color: #0085a1;
 }
+@media (min-width: 1200px) {
+  .col-lg-offset-2 {
+    margin: 50px;
+  }
+  .col-lg-8 {
+    width: 90%;
+  }
+}
+article .container .row p a {
+  color: #ffa500;
+}
 article .container .row img {
   max-width: 100% !important;
   height: auto;
@@ -510,12 +521,11 @@ article .container .row .pullquote.left {
   float: left;
 }
 figure.highlight {
-  background: #eee;
+  background: #fffae8;
   border: 1px solid #ddd;
   margin-top: 15px;
-  padding: 7px 15px;
-  border-radius: 2px;
-  text-shadow: 0 0 1px #fff;
+  padding: 7px 0;
+  border-radius: 4px;
   line-height: 1.6;
   overflow: auto;
   position: relative;
@@ -523,7 +533,7 @@ figure.highlight {
 }
 figure.highlight figcaption {
   color: #999;
-  font-family: Monaco, Menlo, Consolas, Courier New, monospace;
+  font-family: consolas, Menlo, "PingFang SC", "Microsoft YaHei", monospace;
   margin-bottom: 5px;
   text-shadow: 0 0 1px #fff;
 }
@@ -543,12 +553,12 @@ figure.highlight table {
 }
 figure.highlight table .gutter {
   color: #999;
-  padding-right: 15px;
+  padding: 0 15px;
   border-right: 1px solid #ddd;
   text-align: right;
 }
 figure.highlight table .code {
-  padding-left: 15px;
+  padding: 0 15px;
   border-left: 1px solid #fff;
   color: #666;
 }
@@ -557,6 +567,24 @@ figure.highlight table .line {
 }
 figure.highlight table .line.marked {
   background: #d6d6d6;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: consolas, Menlo, "PingFang SC", "Microsoft YaHei", monospace;
+}
+pre .function .keyword {
+  color: #2469bf;
+}
+pre .function .title {
+  color: #c44f00;
+}
+pre .function .params {
+  color: #a57800;
+}
+pre {
+  font-size: 14px;
 }
 pre .comment,
 pre .template_comment,
@@ -569,6 +597,9 @@ pre .javadoc {
   font-style: italic;
 }
 pre .keyword,
+pre .built_in {
+  color: #248c85;
+}
 pre .winutils,
 pre .method,
 pre .addition,
@@ -578,9 +609,7 @@ pre .status,
 pre .nginx .title {
   color: #859900;
 }
-pre .number,
 pre .command,
-pre .string,
 pre .tag .value,
 pre .phpdoc,
 pre .tex .formula,
@@ -588,18 +617,37 @@ pre .regexp,
 pre .hexcolor {
   color: #2aa198;
 }
+pre .name {
+  color: #2469bf;
+}
+pre .attr {
+  color: #cb2d01;
+}
+pre .string {
+  color: #248c85;
+}
 pre .title,
 pre .localvars,
 pre .chunk,
 pre .decorator,
-pre .built_in,
 pre .identifier,
 pre .vhdl,
 pre .literal,
 pre .id {
   color: #268bd2;
 }
-pre .attribute,
+pre .selector-tag {
+  color: #2469bf;
+}
+pre .selector-class {
+  color: #c44f00;
+}
+pre .attribute {
+  color: #3c7a03;
+}
+pre .number {
+  color: #9b49ea;
+}
 pre .variable,
 pre .lisp .body,
 pre .smalltalk .number,
