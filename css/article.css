@@ -105,6 +105,16 @@ figure.highlight table .line {
 figure.highlight table .line.marked {
   background: #d6d6d6;
 }
+figure.highlight {
+  font-family: font-code;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
 code,
 kbd,
 pre,

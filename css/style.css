@@ -161,7 +161,6 @@ hr.small {
   background-color: #808080;
   background-position: center center;
   background-attachment: scroll;
-  margin-bottom: 50px;
 }
 .intro-header .site-heading,
 .intro-header .post-heading,
@@ -454,17 +453,15 @@ body {
   webkit-tap-highlight-color: #0085a1;
 }
 .BlogAnchor {
-  background: #f1f1f1;
+  box-shadow: inset 2px 2px 40px #888;
   padding: 10px;
   line-height: 180%;
   width: 320px;
   z-index: 999;
 }
 .BlogAnchor p {
-  font-size: 18px;
-  color: #15a230;
   margin: 0 0 0.3rem 0;
-  text-align: right;
+  text-align: center;
 }
 .BlogAnchor .AnchorContent {
   padding: 5px 0px;
@@ -478,32 +475,30 @@ body {
 .BlogAnchor li .nav_item {
   padding: 3px;
 }
-.BlogAnchor li .item_h1 {
+.BlogAnchor li .item_h2 {
   margin-left: 0rem;
 }
-.BlogAnchor li .item_h2 {
+.BlogAnchor li .item_h3 {
   margin-left: 2rem;
   font-size: 14px;
 }
-.BlogAnchor li .nav_item.current {
-  color: #fff;
-  background-color: #5cc26f;
+.BlogAnchor li .nav_item.current,
+.BlogAnchor a:hover {
+  color: #0085a1;
 }
 #AnchorContentToggle {
-  font-size: 13px;
+  font-size: 16px;
   font-weight: normal;
-  color: #fff;
+  color: #888;
   display: inline-block;
   line-height: 20px;
-  background: #5cc26f;
   font-style: normal;
   padding: 1px 8px;
-}
-.BlogAnchor a:hover {
-  color: #5cc26f;
+  border-bottom: 1px solid #888;
 }
 .BlogAnchor a {
   text-decoration: none;
+  color: #999;
 }
 @media (min-width: 1200px) {
   .col-lg-offset-2 {
@@ -619,6 +614,16 @@ figure.highlight table .line {
 }
 figure.highlight table .line.marked {
   background: #d6d6d6;
+}
+figure.highlight {
+  font-family: Inconsolata, Monaco, Consolas, 'Courier New', Courier, monospace;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
 }
 code,
 kbd,
