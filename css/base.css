@@ -453,6 +453,59 @@ img::-moz-selection {
 body {
   webkit-tap-highlight-color: #0085a1;
 }
+/*导航栏样式设置*/
+.BlogAnchor {
+  background: #f1f1f1;
+  padding: 10px;
+  line-height: 180%;
+  width: 320px;
+  z-index: 999;
+}
+.BlogAnchor p {
+  font-size: 18px;
+  color: #15a230;
+  margin: 0 0 0.3rem 0;
+  text-align: right;
+}
+.BlogAnchor .AnchorContent {
+  padding: 5px 0px;
+  overflow: auto;
+}
+.BlogAnchor li {
+  text-indent: 0.5rem;
+  font-size: 14px;
+  list-style: none;
+}
+.BlogAnchor li .nav_item {
+  padding: 3px;
+}
+.BlogAnchor li .item_h1 {
+  margin-left: 0rem;
+}
+.BlogAnchor li .item_h2 {
+  margin-left: 2rem;
+  font-size: 14px;
+}
+.BlogAnchor li .nav_item.current {
+  color: #fff;
+  background-color: #5cc26f;
+}
+#AnchorContentToggle {
+  font-size: 13px;
+  font-weight: normal;
+  color: #fff;
+  display: inline-block;
+  line-height: 20px;
+  background: #5cc26f;
+  font-style: normal;
+  padding: 1px 8px;
+}
+.BlogAnchor a:hover {
+  color: #5cc26f;
+}
+.BlogAnchor a {
+  text-decoration: none;
+}
 @media (min-width: 1200px) {
   .col-lg-offset-2 {
     margin: 50px;

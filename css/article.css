@@ -111,6 +111,12 @@ pre,
 samp {
   font-family: font-mono;
 }
+figure.css .keyword {
+  color: color-armygreen;
+}
+figure.css .string {
+  color: color-sea;
+}
 pre .function .keyword {
   color: color-blue;
 }
