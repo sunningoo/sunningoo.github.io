@@ -460,6 +460,8 @@ body {
   line-height: 180%;
   width: 320px;
   z-index: 999;
+  position: relative;
+  float: right;
 }
 .BlogAnchor p {
   margin: 0 0 0.3rem 0;
@@ -501,6 +503,22 @@ body {
 .BlogAnchor a {
   text-decoration: none;
   color: #999;
+}
+article .container,
+footer .container,
+hr {
+  margin-right: 320px;
+}
+@media (min-width: 1200px) {
+  .container {
+    width: auto;
+  }
+  .col-lg-offset-2 {
+    margin: 25px 50px;
+  }
+  .col-lg-8 {
+    width: 90%;
+  }
 }
 @media (min-width: 1200px) {
   .container {
