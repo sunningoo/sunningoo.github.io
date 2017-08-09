@@ -503,11 +503,24 @@ body {
   color: #999;
 }
 @media (min-width: 1200px) {
+  .container {
+    width: auto;
+  }
   .col-lg-offset-2 {
     margin: 25px 50px;
   }
   .col-lg-8 {
     width: 90%;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: auto;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    width: auto;
   }
 }
 article .container .row p a {
