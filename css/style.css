@@ -322,7 +322,7 @@ hr.small {
   height: 30px;
 }
 footer {
-  padding: 50px 0 65px;
+  padding: 0 25px;
 }
 footer .list-inline {
   margin: 0;
@@ -502,7 +502,7 @@ body {
 }
 @media (min-width: 1200px) {
   .col-lg-offset-2 {
-    margin: 50px;
+    margin: 25px 50px;
   }
   .col-lg-8 {
     width: 90%;
@@ -514,6 +514,7 @@ article .container .row p a {
 article .container .row img {
   max-width: 100% !important;
   height: auto;
+  margin-top: 20px;
   display: inline-block;
 }
 article .container .row .video-container {
@@ -535,10 +536,16 @@ article .container .row .video-container embed {
 }
 article .container .row blockquote {
   border-color: #ddd;
+  background-color: #f5f5f5;
   font-family: cursive;
   font-size: 18px;
   padding: 15px;
   text-align: center;
+}
+article .container .row blockquote p {
+  margin: 0;
+  text-align: left;
+  font-family: Inconsolata, Monaco, Consolas, 'Courier New', Courier, monospace;
 }
 article .container .row blockquote ol li {
   text-align: left;
@@ -631,19 +638,47 @@ pre,
 samp {
   font-family: consolas, Menlo, "PingFang SC", "Microsoft YaHei", monospace;
 }
+figure.html .name {
+  color: #2469bf;
+}
+figure.html .attr {
+  color: #cb2d01;
+}
+figure.html .string {
+  color: #248c85;
+}
 figure.css .keyword {
   color: #3c7a03;
 }
 figure.css .string {
   color: #248c85;
 }
-pre .function .keyword {
+figure.css .selector-tag {
   color: #2469bf;
 }
-pre .function .title {
+figure.css .selector-class {
   color: #c44f00;
 }
-pre .function .params {
+figure.css .attribute {
+  color: #3c7a03;
+}
+figure.css .number {
+  color: #9b49ea;
+}
+figure.javascript .function .keyword,
+figure.javascript .keyword {
+  color: #2469bf;
+}
+figure.javascript .string {
+  color: #248c85;
+}
+figure.javascript .built_in {
+  color: #3c7a03;
+}
+figure.javascript .function .title {
+  color: #c44f00;
+}
+figure.javascript .function .params {
   color: #a57800;
 }
 pre {
@@ -658,10 +693,6 @@ pre .lisp .string,
 pre .javadoc {
   color: #93a1a1;
   font-style: italic;
-}
-pre .keyword,
-pre .built_in {
-  color: #248c85;
 }
 pre .winutils,
 pre .method,
@@ -680,15 +711,6 @@ pre .regexp,
 pre .hexcolor {
   color: #2aa198;
 }
-pre .name {
-  color: #2469bf;
-}
-pre .attr {
-  color: #cb2d01;
-}
-pre .string {
-  color: #248c85;
-}
 pre .title,
 pre .localvars,
 pre .chunk,
@@ -698,18 +720,6 @@ pre .vhdl,
 pre .literal,
 pre .id {
   color: #268bd2;
-}
-pre .selector-tag {
-  color: #2469bf;
-}
-pre .selector-class {
-  color: #c44f00;
-}
-pre .attribute {
-  color: #3c7a03;
-}
-pre .number {
-  color: #9b49ea;
 }
 pre .variable,
 pre .lisp .body,

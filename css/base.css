@@ -322,7 +322,7 @@ hr.small {
   height: 30px;
 }
 footer {
-  padding: 50px 0 65px;
+  padding: 0 25px;
 }
 footer .list-inline {
   margin: 0;
@@ -503,7 +503,7 @@ body {
 }
 @media (min-width: 1200px) {
   .col-lg-offset-2 {
-    margin: 50px;
+    margin: 25px 50px;
   }
   .col-lg-8 {
     width: 90%;

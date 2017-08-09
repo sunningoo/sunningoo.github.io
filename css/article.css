@@ -4,6 +4,7 @@ article .container .row p a {
 article .container .row img {
   max-width: 100% !important;
   height: auto;
+  margin-top: 20px;
   display: inline-block;
 }
 article .container .row .video-container {
@@ -25,10 +26,16 @@ article .container .row .video-container embed {
 }
 article .container .row blockquote {
   border-color: #ddd;
+  background-color: #f5f5f5;
   font-family: cursive;
   font-size: 18px;
   padding: 15px;
   text-align: center;
+}
+article .container .row blockquote p {
+  margin: 0;
+  text-align: left;
+  font-family: font-code;
 }
 article .container .row blockquote ol li {
   text-align: left;
@@ -121,19 +128,47 @@ pre,
 samp {
   font-family: font-mono;
 }
+figure.html .name {
+  color: color-blue;
+}
+figure.html .attr {
+  color: color-darkorange;
+}
+figure.html .string {
+  color: color-sea;
+}
 figure.css .keyword {
   color: color-armygreen;
 }
 figure.css .string {
   color: color-sea;
 }
-pre .function .keyword {
+figure.css .selector-tag {
   color: color-blue;
 }
-pre .function .title {
+figure.css .selector-class {
   color: color-orange;
 }
-pre .function .params {
+figure.css .attribute {
+  color: color-armygreen;
+}
+figure.css .number {
+  color: color-purple;
+}
+figure.javascript .function .keyword,
+figure.javascript .keyword {
+  color: color-blue;
+}
+figure.javascript .string {
+  color: color-sea;
+}
+figure.javascript .built_in {
+  color: color-armygreen;
+}
+figure.javascript .function .title {
+  color: color-orange;
+}
+figure.javascript .function .params {
   color: color-brown;
 }
 pre {
@@ -148,10 +183,6 @@ pre .lisp .string,
 pre .javadoc {
   color: #93a1a1;
   font-style: italic;
-}
-pre .keyword,
-pre .built_in {
-  color: color-sea;
 }
 pre .winutils,
 pre .method,
@@ -170,15 +201,6 @@ pre .regexp,
 pre .hexcolor {
   color: #2aa198;
 }
-pre .name {
-  color: color-blue;
-}
-pre .attr {
-  color: color-darkorange;
-}
-pre .string {
-  color: color-sea;
-}
 pre .title,
 pre .localvars,
 pre .chunk,
@@ -188,18 +210,6 @@ pre .vhdl,
 pre .literal,
 pre .id {
   color: #268bd2;
-}
-pre .selector-tag {
-  color: color-blue;
-}
-pre .selector-class {
-  color: color-orange;
-}
-pre .attribute {
-  color: color-armygreen;
-}
-pre .number {
-  color: color-purple;
 }
 pre .variable,
 pre .lisp .body,
