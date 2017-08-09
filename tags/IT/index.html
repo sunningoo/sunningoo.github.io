@@ -281,15 +281,15 @@
 	    if(h > containerHeight){
 	        $(".BlogAnchor").css({
 	            "position": "fixed",
-	            "left": "0",
+	            "right": "0",
 	            "top": "0",
 	            "bottom": "0"
 	        });
-	        $("article .container,footer .container,hr").css("margin-left", "320px");
+	        $("article .container,footer .container,hr").css("margin-right", "320px");
 	    }else{
 	        $(".BlogAnchor").css({
 	            "position": "relative",
-	            "float": "left"
+	            "float": "right"
 	        });
 	        $("article .container,footer .container,hr").css("overflow", "hidden");
 	    }
