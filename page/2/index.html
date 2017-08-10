@@ -20,7 +20,7 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="gulp自动化（1）—— 环境搭建"/>
+        <meta property="og:title" content="Sunning&#39;s Home"/>
     
 
     <!--Open Graph Description-->
@@ -33,7 +33,7 @@
 
     <!--Type page-->
     
-        <meta property="og:type" content="article" />
+        <meta property="og:type" content="website" />
     
 
     <!--Page Cover-->
@@ -44,7 +44,7 @@
 
     <!-- Title -->
     
-    <title>gulp自动化（1）—— 环境搭建 - Sunning&#39;s Home</title>
+    <title>page - Sunning&#39;s Home</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
@@ -156,104 +156,54 @@
 
     <!-- Main Content -->
     <!-- Page Header -->
-<!-- Set your background image for this header in your post front-matter: cover -->
-
+<!-- Set your background image for this header in the theme's configuration: index_cover -->
 <header class="intro-header" style="background-image: url('http://www.codeblocq.com/assets/projects/hexo-theme-clean-blog/img/home-bg.jpg')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="post-heading">
-                    <h1>gulp自动化（1）—— 环境搭建</h1>
-                    
-                    <span class="meta">
-                        <!-- Date and Author -->
-                        
-                        
-                            2017-08-04
-                        
-                    </span>
+                <div class="site-heading">
+                    <h1>Sunning's Home</h1>
+                    <hr class="small">
+                    <span class="subheading">Luv The Life!</span>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
-<!-- Post Content -->
-<article>
-    <div class="container">
-        <div class="row">
-
-            <!-- Tags and categories -->
-           
-                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
-                    
-                        
-
-
-<a href="/tags/gulp/">#gulp</a>
-
-
-                    
-                </div>
-                <div class="col-lg-4 col-md-5 post-categories">
-                    
-                </div>
+<!-- Main Content -->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            
+                <div class="post-preview">
+    <a href="/2017/08/04/hello-sunning/">
+        <h2 class="post-title">
+            Sunning的第一篇博客
+        </h2>
+        
+    </a>
+    <p class="post-meta">
+        <!-- Date and Author -->
+        
+        2017-08-04
+    </p>
+</div>
+<hr>
             
 
-            <!-- Gallery -->
-            
-
-            <!-- Post Main Content -->
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <h1 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h1><p>作者： <a href="https://github.com/sunningoo/" target="_blank" rel="external">Sunning</a><br>日期： 2017 年 8 月 4 日</p>
-<p>前几天正好有时间，所以就利用node + gulp + browser-sync搭建了一套前端的自动化开发。实现了如下的一些小功能：</p>
-<blockquote>
-<ol>
-<li>文件修改后，浏览器的自动刷新</li>
-<li>scss文件自动编译为css文件，并生成map文件，添加版本号</li>
-<li>js代码检查</li>
-<li>html、css、js文件压缩打包</li>
-</ol>
-</blockquote>
-<h2 id="node安装"><a href="#node安装" class="headerlink" title="node安装"></a>node安装</h2><p><a href="https://nodejs.org/en/download/" target="_blank" rel="external">Node.js安装包及源码下载地址</a>。gulp的运行需要基于node环境，所以请先确保node环境正常。使用快捷键win + r打开cmd，输入</p>
-<blockquote>
-<p>node –version</p>
-</blockquote>
-<p>出现版本号则证明node已经成功安装（之后的gulp安装等同理）：<br><img src="../../../../img/cmd-node-vrsion.png" alt=""></p>
-<h2 id="gulp安装"><a href="#gulp安装" class="headerlink" title="gulp安装"></a>gulp安装</h2><p>打开cmd，全局安装gulp</p>
-<blockquote>
-<p>npm install gulp -g</p>
-</blockquote>
-<p>本地项目也需要安装gulp，可以采用link命令，之后将做具体的阐述。</p>
-<h2 id="安装browser-sync"><a href="#安装browser-sync" class="headerlink" title="安装browser-sync"></a>安装browser-sync</h2><p>Browsersyn能让浏览器快速的响应项目中html、css、sass、less、js等文件的修改，并刷新浏览器，省去了开发人员每次修改文件后都需要F5浏览器的烦恼。<br>点击<a href="http://www.browsersync.cn/" target="_blank" rel="external">browser-sync</a>查看安装方法及地址，安装命令（也是全局安装，避免以后其余的项目需要安装时，每次运行安装命令）：</p>
-<blockquote>
-<p>npm install browser-sync -g</p>
-</blockquote>
-<h2 id="创建项目目录"><a href="#创建项目目录" class="headerlink" title="创建项目目录"></a>创建项目目录</h2><p>以上环境安装好之后，就可以开始创建项目目录啦。选用一个常用的目录存放项目，假如创建一个文件gulpDemo，大致目录如下：</p>
-<blockquote>
-<p>gulpDemo<br>|—— node_modules<br>|—— src<br>|—— gulpfile.js<br>|—— package.json</p>
-</blockquote>
-<p>创建gulpDemo后只需先创建src文件夹和gulpfile.js，其余会通过命令生成，其中src文件夹中放项目（具体文件目录看个人喜好），本次实例目录层次大致如下：</p>
-<blockquote>
-<p>src<br>|—— css<br>|—— img<br>|—— js<br>|—— lib<br>|—— page<br>|—— sass<br>|—— index.html</p>
-</blockquote>
-<p>以上工作完毕之后，我们就可以开始gulp的一些配置啦。详细配置请参考下一篇文章：<a href="/2017/08/09/gulp-course2/">gulp自动化（2）—— gulp配置</a></p>
-
-
-                
-            </div>
-
-            <!-- Comments -->
-            
-                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    
-
-
-                </div>
-            
+            <ul class="pager">
+    
+        <li class="previous"><a href="/">上一页</a></li>
+    
+    
+</ul>
+<!--&larr;箭头左；箭头右  &rarr;-->
         </div>
     </div>
-</article>
+</div>
+
+
 
     <!-- Footer -->
     <hr />

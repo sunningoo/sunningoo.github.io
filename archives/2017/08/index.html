@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-Hans">
+<html lang="zh-CN">
 
 <!-- Head tag -->
 <head>
@@ -44,7 +44,7 @@
 
     <!-- Title -->
     
-    <title>Archiv: 2017/8 - Sunning&#39;s Home</title>
+    <title>归档：2017/8 - Sunning&#39;s Home</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
@@ -220,6 +220,7 @@
     
     
 </ul>
+<!--&larr;箭头左；箭头右  &rarr;-->
         </div>
     </div>
 </div>
@@ -282,116 +283,118 @@
 	//var expandNavBar = true;
 	var metaMessage = document.querySelector('meta[property="og:type"]').getAttribute('content');
 	if(metaMessage == "article"){//判断是否为非首页
-	$(window).scroll(function(){
-	    var containerHeight = $(".container").height() + 50;
-	    var h=$(this).scrollTop();//获得滚动条距top的高度
-	    if(h > containerHeight){
-	        $(".BlogAnchor").css({
-	            "position": "fixed",
-	            "right": "0",
-	            "top": "0",
-	            "bottom": "0"
-	        });
-	        $("article .container,footer .container,hr").css("margin-right", "320px");
-	    }else{
-	        $(".BlogAnchor").css({
-	            "position": "relative",
-	            "float": "right"
-	        });
-	        $("article .container,footer .container,hr").css("overflow", "hidden");
-	    }
-	});
-	$(document).ready(function(){
-	    /*H1标签默认为标题，所以不加入到目录中*/
-	    var h2s = $("body article .container").find("h2");
-	    var h3s = $("body article .container").find("h3");
-	    var h4s = $("body article .container").find("h4");
-	    var h5s = $("body article .container").find("h5");
-	    var h6s = $("body article .container").find("h6");
-	
-	    var headCounts = [h2s.length, h3s.length, h4s.length, h5s.length, h6s.length];
-	    var vH2Tag = null;
-	    var vH3Tag = null;
-	    for(var i = 0; i < headCounts.length; i++){
-	        if(headCounts[i] > 0){
-	            if(vH2Tag == null){
-	                vH2Tag = 'h' + (i + 2);
-	            }else{
-	                vH3Tag = 'h' + (i + 2);
-	            }
-	        }
-	    }
-	    if(vH2Tag == null){
-	        return;
-	    }
-	
-	    $("body article").prepend('<div class="BlogAnchor">' + 
-	        '<p>' + 
-	            '<b id="AnchorContentToggle" title="收起" style="cursor:pointer;">文章目录</b>' + 
-	        '</p>' + 
-	        '<div class="AnchorContent" id="AnchorContent"> </div>' + 
-	    '</div>' );
-	
-	    var vH1Index = 0;
-	    var vH2Index = 0;
-	    $("body article .container").find("h2,h3,h4,h5,h6").each(function(i,item){
-	        var id = '';
-	        var name = '';
-	        var tag = $(item).get(0).tagName.toLowerCase();
-	        var className = '';
-	        if(tag == vH2Tag){
-	            id = name = ++vH1Index;
-	            name = id;
-	            vH2Index = 0;
-	            className = 'item_h2';
-	        }else if(tag == vH3Tag){
-	            id = vH1Index + '_' + ++vH2Index;
-	            name = vH1Index + '.' + vH2Index;
-	            className = 'item_h3';
-	        }
-	        $(item).attr("id","wow"+id);
-	        $(item).addClass("wow_head");
-	//      $("#AnchorContent").css('max-height', ($(window).height() - 180) + 'px');
-	        $("#AnchorContent").append('<li><a class="nav_item '+className+' anchor-link" onclick="return false;" href="#" link="#wow'+id+'">'+name+". "+$(this).text()+'</a></li>');
-	    });
-	
-	    $("#AnchorContentToggle").click(function(){
-	        var text = $(this).html();
-	//              if(text=="目录▲"){
-	//                  $(this).html("目录▼");
-	//                  $(this).attr({"title":"展开"});
-	//                  $(".BlogAnchor").css("width","0");
-	////                    $("body").css("padding-left", "0");
-	//                  $("body").animate({left:"-=320px"},1000);
-	//              }else{
-	//                  $(this).html("目录▲");
-	//                  $(this).attr({"title":"收起"});
-	//                  $(".BlogAnchor").css("width","320px");
-	////                    $("body").css("padding-left", "320px");
-	//                  $("body").animate({left:"+=320px"},1000);
-	//              }
-	        $("#AnchorContent").toggle();
-	    });
-	    $(".anchor-link").click(function(){
-	        $("html,body").animate({scrollTop: $($(this).attr("link")).offset().top}, 500);
-	    });
-	
-	    var headerNavs = $(".BlogAnchor li .nav_item");
-	    var headerTops = [];
-	    $(".wow_head").each(function(i, n){
-	        headerTops.push($(n).offset().top);
-	    });
-	    $(window).scroll(function(){
-	        var scrollTop = $(window).scrollTop();
-	        $.each(headerTops, function(i, n){
-	            var distance = n - scrollTop;
-	            if(distance >= 0){
-	                $(".BlogAnchor li .nav_item.current").removeClass('current');
-	                $(headerNavs[i]).addClass('current');
-	                return false;
-	            }
-	        });
-	    });
+		$(".container .row>div").css({
+			"margin": "25px 50px",
+			"float": "left"
+		});
+		$(window).scroll(function(){
+		    var containerHeight = $(".container").height() + 50;
+		    var h=$(this).scrollTop();//获得滚动条距top的高度
+		    if(h > containerHeight){
+		        $(".BlogAnchor").css({
+		            "position": "fixed",
+		            "right": "0",
+		            "top": "0",
+		            "bottom": "0"
+		        });
+		        $("article .container,footer .container,hr").css("margin-right", "320px");
+		    }else{
+		        $(".BlogAnchor").css({
+		            "position": "relative",
+		            "float": "right"
+		        });
+		        $("article .container,footer .container,hr").css("overflow", "hidden");
+		    }
+		});
+		$(document).ready(function(){
+		    /*H1标签默认为标题，所以不加入到目录中*/
+		    var h2s = $("body article .container").find("h2");
+		    var h3s = $("body article .container").find("h3");
+		    var h4s = $("body article .container").find("h4");
+		    var h5s = $("body article .container").find("h5");
+		    var h6s = $("body article .container").find("h6");
+		
+		    var headCounts = [h2s.length, h3s.length, h4s.length, h5s.length, h6s.length];
+		    var vH2Tag = null;
+		    var vH3Tag = null;
+		    for(var i = 0; i < headCounts.length; i++){
+		        if(headCounts[i] > 0){
+		            if(vH2Tag == null){
+		                vH2Tag = 'h' + (i + 2);
+		            }else{
+		                vH3Tag = 'h' + (i + 2);
+		            }
+		        }
+		    }
+		    if(vH2Tag == null){
+		        return;
+		    }
+		
+		    $("body article").prepend('<div class="BlogAnchor">' + 
+		        '<p>' + 
+		            '<b id="AnchorContentToggle" title="收起" style="cursor:pointer;">文章目录</b>' + 
+		        '</p>' + 
+		        '<div class="AnchorContent" id="AnchorContent"> </div>' + 
+		    '</div>' );
+		
+		    var vH1Index = 0;
+		    var vH2Index = 0;
+		    $("body article .container").find("h2,h3,h4,h5,h6").each(function(i,item){
+		        var id = '';
+		        var name = '';
+		        var tag = $(item).get(0).tagName.toLowerCase();
+		        var className = '';
+		        if(tag == vH2Tag){
+		            id = name = ++vH1Index;
+		            name = id;
+		            vH2Index = 0;
+		            className = 'item_h2';
+		        }else if(tag == vH3Tag){
+		            id = vH1Index + '_' + ++vH2Index;
+		            name = vH1Index + '.' + vH2Index;
+		            className = 'item_h3';
+		        }
+		        $(item).attr("id","wow"+id);
+		        $(item).addClass("wow_head");
+		//      $("#AnchorContent").css('max-height', ($(window).height() - 180) + 'px');
+		        $("#AnchorContent").append('<li><a class="nav_item '+className+' anchor-link" onclick="return false;" href="#" link="#wow'+id+'">'+name+". "+$(this).text()+'</a></li>');
+		    });
+		
+		    $("#AnchorContentToggle").click(function(){
+		        var text = $(this).html();
+//	              if(text=="目录▲"){
+//	                  $(this).html("目录▼");
+//	                  $(this).attr({"title":"展开"});
+//	                  $(".BlogAnchor").css("width","0");
+//	                  $("body").animate({left:"-=320px"},1000);
+//	              }else{
+//	                  $(this).html("目录▲");
+//	                  $(this).attr({"title":"收起"});
+//	                  $(".BlogAnchor").css("width","320px");
+//	                  $("body").animate({left:"+=320px"},1000);
+//	              }
+		        $("#AnchorContent").toggle();
+		    });
+		    $(".anchor-link").click(function(){
+		        $("html,body").animate({scrollTop: $($(this).attr("link")).offset().top}, 500);
+		    });
+		
+		    var headerNavs = $(".BlogAnchor li .nav_item");
+		    var headerTops = [];
+		    $(".wow_head").each(function(i, n){
+		        headerTops.push($(n).offset().top);
+		    });
+		    $(window).scroll(function(){
+		        var scrollTop = $(window).scrollTop();
+		        $.each(headerTops, function(i, n){
+		            var distance = n - scrollTop;
+		            if(distance >= 0){
+		                $(".BlogAnchor li .nav_item.current").removeClass('current');
+		                $(headerNavs[i]).addClass('current');
+		                return false;
+		            }
+		        });
+		    });
 	
 	//      if(!expandNavBar){
 	//          $(this).html("目录▼");
@@ -399,6 +402,13 @@
 	//          $("#AnchorContent").hide();
 	//      }
 	    }); 
+	}else{//首页
+		$("article .container,footer .container,hr").css("margin-right", "0");
+		$(".container .row>div").css({
+			"margin": "25px auto",
+			"float": "inherit"
+		});
+		
 	}
 </script>
 
