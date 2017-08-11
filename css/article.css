@@ -1,3 +1,8 @@
+article .container .row p strong,
+article .container .row p b {
+  color: color-red;
+  font-weight: 500;
+}
 article .container .row p a {
   color: #ffa500;
 }

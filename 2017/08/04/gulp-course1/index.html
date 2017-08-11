@@ -49,13 +49,10 @@
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css">
-
     <!-- Custom Fonts -->
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+    <!--<link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">-->
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -67,6 +64,9 @@
     <!-- Gallery -->
     <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
 	
+	<!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+    
     <!-- Google Analytics -->
     
 
@@ -158,7 +158,7 @@
     <!-- Page Header -->
 <!-- Set your background image for this header in your post front-matter: cover -->
 
-<header class="intro-header" style="background-image: url('http://www.codeblocq.com/assets/projects/hexo-theme-clean-blog/img/home-bg.jpg')">
+<header class="intro-header" style="background-image: url('http://sunning.oss-cn-shenzhen.aliyuncs.com/hexo-blog/home-bg.jpg?x-oss-process=style/horizon')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -219,7 +219,7 @@
 <blockquote>
 <p>node –version</p>
 </blockquote>
-<p>出现版本号则证明node已经成功安装（之后的gulp安装等同理）：<br><img src="../../../../img/cmd-node-vrsion.png" alt=""></p>
+<p>出现版本号则证明node已经成功安装（之后的gulp安装等同理）：<br><img src="http://sunning.oss-cn-shenzhen.aliyuncs.com/hexo-blog/cmd-node-vrsion.png?x-oss-process=style/horizon" alt="gulp版本号"></p>
 <h2 id="gulp安装"><a href="#gulp安装" class="headerlink" title="gulp安装"></a>gulp安装</h2><p>打开cmd，全局安装gulp</p>
 <blockquote>
 <p>npm install gulp -g</p>
@@ -229,14 +229,7 @@
 <blockquote>
 <p>npm install browser-sync -g</p>
 </blockquote>
-<h2 id="创建项目目录"><a href="#创建项目目录" class="headerlink" title="创建项目目录"></a>创建项目目录</h2><p>以上环境安装好之后，就可以开始创建项目目录啦。选用一个常用的目录存放项目，假如创建一个文件gulpDemo，大致目录如下：</p>
-<blockquote>
-<p>gulpDemo<br>|—— node_modules<br>|—— src<br>|—— gulpfile.js<br>|—— package.json</p>
-</blockquote>
-<p>创建gulpDemo后只需先创建src文件夹和gulpfile.js，其余会通过命令生成，其中src文件夹中放项目（具体文件目录看个人喜好），本次实例目录层次大致如下：</p>
-<blockquote>
-<p>src<br>|—— css<br>|—— img<br>|—— js<br>|—— lib<br>|—— page<br>|—— sass<br>|—— index.html</p>
-</blockquote>
+<h2 id="创建项目目录"><a href="#创建项目目录" class="headerlink" title="创建项目目录"></a>创建项目目录</h2><p>以上环境安装好之后，就可以开始创建项目目录啦。选用一个常用的目录存放项目，假如创建一个文件gulpDemo，创建后只需先创建src文件夹和gulpfile.js，其余会通过命令生成，其中src文件夹中放项目（具体文件目录看个人喜好）：<br><figure class="highlight crystal"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">gulpDemo （项目目录）</div><div class="line">    |— node_modules （组件目录）</div><div class="line">    |— output （压缩包）</div><div class="line">    |— dist （发布环境）</div><div class="line">    	|— css</div><div class="line">		|— js</div><div class="line">		|— <span class="class"><span class="keyword">lib</span></span></div><div class="line">		|— page</div><div class="line">		|— index.html</div><div class="line">    |— src （生产环境）</div><div class="line">    	|— css</div><div class="line">		|— js</div><div class="line">		|— <span class="class"><span class="keyword">lib</span></span></div><div class="line">		|— page</div><div class="line">		|— sass</div><div class="line">		|— index.html</div><div class="line">    |— gulpfile.js （gulp配置信息）</div><div class="line">    |— package.json （项目信息）</div></pre></td></tr></table></figure></p>
 <p>以上工作完毕之后，我们就可以开始gulp的一些配置啦。详细配置请参考下一篇文章：<a href="/2017/08/09/gulp-course2/">gulp自动化（2）—— gulp配置</a></p>
 
 

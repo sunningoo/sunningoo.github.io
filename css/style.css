@@ -38,8 +38,6 @@ body {
 p {
   line-height: 1.5;
   margin: 30px 0;
-  white-space: normal;
-  word-break: break-all;
 }
 p a,
 li a {
@@ -548,13 +546,33 @@ hr {
     margin-left: 0;
   }
 }
-@media (min-width: 768px) {
+@media (max-width: 991px) {
   .container {
     width: auto;
   }
-  .container .row>div {
-    margin: 15px 30px;
+  .BlogAnchor {
+    width: 0;
+    display: none;
   }
+  article .container,
+  footer .container,
+  hr {
+    margin-right: 0 !important;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    width: auto !important;
+  }
+  .container .row>div {
+    margin: 15px 30px !important;
+    float: inherit !important;
+  }
+}
+article .container .row p strong,
+article .container .row p b {
+  color: #f00;
+  font-weight: 500;
 }
 article .container .row p a {
   color: #ffa500;
